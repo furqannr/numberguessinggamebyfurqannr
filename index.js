@@ -23,7 +23,7 @@ async function askQuestion() {
             message: "Guess the number",
         },
     ])
-        .then((answers) => {
+        .then(async (answers) => {
         if (lives > 1 && answers.guess == num) {
             console.log("You have guessed the right number");
         }
@@ -31,11 +31,12 @@ async function askQuestion() {
             lives--;
             console.log("Wrong guess!!! Try Again");
             console.log(`${lives} life left`);
-            askQuestion();
+            await askQuestion();
         }
         else {
             console.log(`${--lives} life left`);
             console.log("You lost");
+            console.log("Correct number was: " + num);
         }
     });
 }
@@ -47,6 +48,8 @@ async function continueChoice() {
             name: "qa",
             message: chalk.bgGrey("Do you want to play again? Press Y or y for Yes")
         });
+        num = Math.ceil(Math.random() * 10);
+        lives = 3;
     } while (choice.qa == 'yes' || choice.qa == 'Yes' || choice.qa == 'YES' || choice.qa == 'y' || choice.qa == 'Y');
 }
 continueChoice();
