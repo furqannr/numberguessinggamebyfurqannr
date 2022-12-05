@@ -6,17 +6,17 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-console.log(chalk.bgBlue("Number Guessing Game"));
-console.log(chalk.redBright("Rules: You have 3 lives to guess the correct Number!!!"));
-console.log(chalk.redBright("Guess number from 1 to 10"));
-
-// setTimeout(() => {
-//         console.log(chalk.redBright("Lets start the game"));
-//     }, 2000);
-console.log(chalk.redBright("Lets start the game"));
+async function welcome() {
+  console.log(chalk.bgBlue("Number Guessing Game"));
+  console.log(chalk.redBright("Rules: You have 3 lives to guess the correct Number!!!"));
+  console.log(chalk.redBright("Guess number from 1 to 10"));    
+  console.log(chalk.bgGreen("Lets start the game"));
+   
+}
+welcome();
 let num:number=Math.ceil(Math.random()*10);
 let lives=3;
-console.log(num);
+//console.log(num);
 
 async function askQuestion() {
   await inquirer
@@ -27,18 +27,18 @@ async function askQuestion() {
         message: "Guess the number",
       },
     ])
-    .then(async (answers) => {
-      if (lives > 1 && answers.guess == num) {
-        console.log("You have guessed the right number");
+    .then(async (answers) => {//Answers had to be async for waiting to complete function recall in else if
+      if (lives >= 1 && answers.guess == num) {
+        console.log(chalk.bgGreenBright("Hurrah!!! You have guessed the right number"));
       } else if (lives > 1 && answers.guess != num) {
         lives--;
         console.log("Wrong guess!!! Try Again");
-        console.log(`${lives} life left`);
+        console.log(chalk.redBright(`${lives} life left`));
        await askQuestion();
       } else {
-        console.log(`${--lives} life left`);
-        console.log("You lost");
-        console.log("Correct number was: "+num);
+        //console.log(`${--lives} life left`);
+        console.log(chalk.bgRedBright("You lost"));
+        console.log(chalk.bgBlue("Correct number was: "+num));
       }
     });
 }
@@ -50,7 +50,7 @@ async function continueChoice() {
             {
                 type: "input",
                 name: "qa",
-                message: chalk.bgGrey("Do you want to play again? Press Y or y for Yes")
+                message: chalk.bgGrey("Do you want to play again? Press Y or y to continue")
             })
             num=Math.ceil(Math.random()*10);
             lives=3;
