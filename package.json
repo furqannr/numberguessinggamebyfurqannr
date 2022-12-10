@@ -1,14 +1,14 @@
 {
-  "name": "numberguessinggame",
-  "version": "1.0.0",
-  "description": "",
+  "name": "numberguessinggamebyfurqannr",
+  "version": "1.0.4",
+  "description": "Number Guessing game with three lives",
   "main": "index.js",
   "type": "module",
   "bin": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "furqannr",
   "license": "ISC",
   "dependencies": {
     "@types/chalk": "^2.2.0",
