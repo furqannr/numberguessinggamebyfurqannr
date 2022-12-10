@@ -8,6 +8,7 @@
 
 import inquirer from "inquirer";
 import chalk from "chalk";
+export {continueChoice};
 
 async function welcome() {
   console.log(chalk.bgBlue("Number Guessing Game"));

@@ -5,6 +5,7 @@
 // Create a GitHub repository for the project and submit its URL in the project submission form.
 import inquirer from "inquirer";
 import chalk from "chalk";
+export { continueChoice };
 async function welcome() {
     console.log(chalk.bgBlue("Number Guessing Game"));
     console.log(chalk.redBright("Rules: You have 3 lives to guess the correct Number!!!"));

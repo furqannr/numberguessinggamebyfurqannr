@@ -1,12 +1,10 @@
 {
   "name": "numberguessinggamebyfurqannr",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Number Guessing game with three lives",
   "main": "index.js",
   "type": "module",
-  "bin": {
-    "bin/numberguessinggamebyfurqannr":"index.js"
-  },
+  "bin": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
