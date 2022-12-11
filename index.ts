@@ -14,8 +14,7 @@ async function welcome() {
   console.log(chalk.bgBlue("Number Guessing Game"));
   console.log(chalk.redBright("Rules: You have 3 lives to guess the correct Number!!!"));
   console.log(chalk.redBright("Guess number from 1 to 10"));    
-  console.log(chalk.bgGreen("Lets start the game"));
-   
+  console.log(chalk.bgGreen("Lets start the game"));   
 }
 welcome();
 let num:number=Math.ceil(Math.random()*10);
