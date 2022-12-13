@@ -1,6 +1,6 @@
 {
   "name": "numberguessinggamebyfurqannr",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Number Guessing game with three lives",
   "main": "index.js",
   "type": "module",
