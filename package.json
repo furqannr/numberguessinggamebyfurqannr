@@ -1,6 +1,6 @@
 {
   "name": "numberguessinggamebyfurqannr",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "Number Guessing game with three lives",
   "main": "index.js",
   "type": "module",
@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.1.2",
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "npx": "^3.0.0"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
